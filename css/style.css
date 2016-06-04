@@ -1,0 +1,43 @@
+
+h1, 
+p{
+	margin: 0 auto;
+	width: 200px; 
+	text-align: center;
+}
+
+.gameboard{
+	margin: 0 auto;
+	width: 300px;
+	text-align: center;
+	padding-top: 100px;
+}
+.square{
+    width:100px;
+    height:100px;
+}
+
+.v{
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+}
+
+.h{
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+}
+
+.x:after{	
+	content: 'x';
+}
+
+.o:after{
+	content: 'o';
+}
+
+.restart{
+	padding-top: 100px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+}
