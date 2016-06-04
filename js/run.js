@@ -19,7 +19,8 @@ $(document).ready(function(){
 		userTurn =! userTurn //tells us whose turn it is (toggles)
 		$(this).addClass('x');
 
-		setTimeout(computer, 1000);
+		setTimeout(computer, 500);
+		testSolutions();
 
 	})
 
@@ -44,13 +45,17 @@ $(document).ready(function(){
 	// Grab all cells
 	var $cells = $('.square');
 
-	// Goes through each solution
-	solutions.forEach(function(solution) {
-		if (checkSolution(solution)) {
-			debugger;
-   		 alert('winner');
-  		}
-	});
+	function testSolutions(){
+	
+		
+		// Goes through each solution
+		solutions.forEach(function(solution) {
+			if (checkSolution(solution)) {
+				//winner
+				alert('test');
+	  		}
+		})
+	}
 
 	function checkSolution(map) {
 	  var solved = true;
@@ -63,7 +68,6 @@ $(document).ready(function(){
 	  else if ($cells.eq(firstCellId).hasClass('o')) {
 	    matcher = 'o';
 	  }
-	  
 	  if (!matcher) {
 	    return false;
 	  }
